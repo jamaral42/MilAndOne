@@ -8,7 +8,7 @@ import WhyUS from "../components/WhyUS";
 export default function Homepage() {
 
   return (
-    <div className="relative">
+    <div className="relative"> 
       <Hero />
       <Services />
       <Clients />
