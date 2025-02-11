@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;600&family=Lora:wght@400;700&family=Poppins:wght@300;400;600&family=Montserrat:wght@400;700&family=Raleway:wght@400;600&family=Quicksand:wght@400;600&family=Merriweather:wght@400;700&family=Nunito:wght@400;600&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2A584A;
+  --color-secondary: #bc9768;
+  --color-secondary_highlight: #C9AB85;
+  --color-tertiary: #f2fff6;
+}
+
+/*
+  font-family: 'Roboto', serif;
+Elegant & High-End
+  font-family: 'Playfair Display', serif; // A stylish serif with a luxurious feel
+  font-family: 'Cormorant Garamond', serif; // Classic and sophisticated
+  font-family: 'Lora', serif; // Elegant but modern
+Modern & Clean
+  font-family: 'Poppins', serif; // A sleek, minimal sans-serif
+  font-family: 'Montserrat', serif; // Contemporary and highly readable
+  font-family: 'Raleway', serif; // Light and stylish
+Warm & Friendly
+  font-family: 'Quicksand', serif; // Soft and approachable
+  font-family: 'Merriweather', serif; // A warm serif with great readability
+  font-family: 'Nunito', serif; // Rounded and inviting
+*/
+
+h1, h2, h3, h4, h5, h6, a {
+  font-family: 'Playfair Display', serif;
+}
+
+body, p {
+  font-family: 'Merriweather', sans-serif;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@layer base {
+  .max-padd-container {
+    @apply mx-auto max-w-[1440px] px-6 lg:px-12 ;
+  }
+
+
+  .flexBetween {
+    @apply flex items-center justify-between;
+  }
+
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+  
+}
+
+/* CSS for minimalist dots */
+.slick-dots.bottom-0 {
+  bottom: 20px !important;
+}
+
+.slick-dots li {
+  margin: 0 8px; /* Adjust spacing */
+}
+
+.slick-dots li button:before {
+  content: none; /* Remove default dot */
+}
+
+.slick-dots li div { /* Target the styled div */
+  transition: transform 0.2s ease, background-color 0.3s ease; /* Smooth transitions */
+}
+
+.slick-dots li.slick-active div { /* Highlight active dot */
+  background-color: white; /* Or any highlight color you prefer */
+  transform: scale(1.2); /* Slightly larger when active */
+}
+
+
