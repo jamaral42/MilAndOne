@@ -12,7 +12,7 @@ export default function Contacts() {
   ];
 
   return (
-    <div className="max-padd-container flex-col py-10 h-[603px]">
+    <div className="max-padd-container flex-col py-10 h-[653px] md:h-[603px] ">
 
       <h1 className="flexCenter text-center text-4xl font-bold py-8">Contacte-nos!</h1>
 

@@ -7,7 +7,7 @@ export default function ContactCard({ name, surname, img, phone }) {
     <div className="flex justify-center">
       <motion.a
         href={`tel:${phone}`}
-        className="flex flex-col items-center h-65 md:h-80 text-black rounded-xl bg-secondary border-4 border-primary shadow-xl"
+        className="flex flex-col items-center h-63 md:h-80 text-black rounded-xl bg-secondary border-4 border-primary shadow-xl"
         whileHover={{ 
           scale: 1.05, 
           boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.3)" 

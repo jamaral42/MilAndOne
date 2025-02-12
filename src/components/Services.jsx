@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 
 const services = [
   {
@@ -31,19 +31,6 @@ const services = [
   },
 ];
 
-const cardAnimation = {
-  initial: { 
-    opacity: 0, 
-    y: 100 
-  },
-  animate: (index) => ({
-    opacity: 1, 
-    y: 0, 
-    transition: {
-      delay: 0.05 * index
-    } 
-  })
-};
 
 export default function Services() {
 
@@ -59,7 +46,6 @@ export default function Services() {
               key={service.title}
               layout = "position"
               className= "cursor-pointer border-2 border-secondary rounded-xl p-8  shadow-md transition-all"
-              variants={cardAnimation}
               initial="initial"
               whileInView="animate"
             >

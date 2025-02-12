@@ -2,7 +2,7 @@ import { FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-primary text-white py-6">
+    <footer className="w-full bg-primary text-white pt-6 pb-3">
       {/* Contact Info */}
       <div className="max-padd-container flexCenter flex-col  gap-4 text-center ">
         <p className="mb-2 text-lg md:text-2xl font-semibold">

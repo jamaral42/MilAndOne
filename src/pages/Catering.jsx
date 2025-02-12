@@ -2,6 +2,7 @@ import Image1 from "/catering/img1.jpg";
 import Image2 from "/catering/img2.jpg";
 import Image3 from "/catering/img3.jpg";
 import Carousel from "../components/Carousel";
+
 const carousel_items = [
   {
     id: 1,
