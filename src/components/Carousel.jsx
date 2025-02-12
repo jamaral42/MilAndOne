@@ -11,35 +11,15 @@ export default function Carousel({ items }) {
     dots: true,
     dotsClass: "slick-dots bottom-0",
     customPaging: () => (
-      <div className="rounded-full w-3 h-3 transition-colors duration-300 bg-gray-300"> {/* Smaller, simpler dots */}
+      <div className="rounded-full size-2 transition-colors duration-300 bg-gray-300"> {/* Smaller, simpler dots */}
       </div>
     ),
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToScroll: 1, 
     autoplay: true, // Optional: Autoplay the carousel
     autoplaySpeed: 3000, // Optional: Autoplay speed in milliseconds
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-        }
-      }
-    ]
   };
 
   return (

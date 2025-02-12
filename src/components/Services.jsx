@@ -1,4 +1,4 @@
-import { delay, motion } from "framer-motion";
+import ServiceCard from "./ServiceCard";
 
 const services = [
   {
@@ -35,40 +35,17 @@ const services = [
 export default function Services() {
 
   return (
-    <div className= " flex flex-col items-center py-20 md:py-40">
-      <h2 className="max-padd-container text-4xl font-bold mb-16">Os Nossos Serviços</h2>
+    <div className= "flex flex-col items-center py-20">
+      <h2 className="text-4xl font-bold mb-16">Os Nossos Serviços</h2>
 
-      <div className="max-padd-container grid md:grid-cols-2 gap-8">
-        {services.map((service) => {
+      <div className="grid md:grid-cols-2 gap-8">
+        {services.map((service, index) => (
+          <ServiceCard
+            key={index}
+            service={service}
+          />
+        ))}
 
-          return (
-            <motion.div
-              key={service.title}
-              layout = "position"
-              className= "cursor-pointer border-2 border-secondary rounded-xl p-8  shadow-md transition-all"
-              initial="initial"
-              whileInView="animate"
-            >
-              {/* Main Service Info */}
-              <motion.div 
-                layout="position" 
-                className="flex items-center gap-6"
-
-              >
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="size-24 md:size-45 border-2 border-secondary rounded-xl object-cover"
-                />
-                <div className="">
-                  <h3 className="text-xl font-semibold">{service.title}</h3>
-                  <p className="text-gray-600">{service.shortDesc}</p>
-                </div>
-              </motion.div>
-
-            </motion.div>
-          );
-        })}
       </div>
     </div>
   );

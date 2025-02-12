@@ -1,56 +1,36 @@
-import { motion } from "framer-motion";
 import { useState } from "react";
-import { FaSearch } from "react-icons/fa"; // Import the magnifier icon
 
 export default function ServiceCard({ service }) {
-  const [isFlipped, setIsFlipped] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  function handleFlip() {
-    if (!isAnimating) {
-      setIsFlipped(!isFlipped);
-      setIsAnimating(true);
-    }
-  }
+  const [showDescription, setShowDescription] = useState(false);
 
   return (
-    <div className="flex items-center justify-center bg-white h-[400px] cursor-default">
-      <div className="flip-card w-[600px] h-[360px] rounded-md relative">
-        <motion.div
-          className="flip-card-inner w-[100%] h-[100%] hover:shadow-xl transition-shadow duration-300"
-          initial={false}
-          animate={{ rotateY: isFlipped ? 180 : 0 } }
-          transition={{ duration: 0.5 }}
-          onAnimationComplete={() => setIsAnimating(false)}
-        >
-          <div
-            className="flip-card-front w-[100%] h-[100%] bg-cover border-[1px] text-white rounded-lg p-4 flex flex-col justify-center items-center"
-            style={{ backgroundImage: `url(${service.image})` }}
-          >
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <h1 className="text-2xl font-bold">{service.title}</h1>
-              <p className="mt-2">{service.shortDesc}</p>
-            </motion.div>
-          </div>
+    <div
+      className={`relative w-160 h-80 bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer transition-all duration-300 ease-in-out
+      hover:scale-105 hover:shadow-2xl`}
+      onClick={() => setShowDescription(!showDescription)}
+    >
+      {/* Image & Text Container */}
+      <div className="h-full w-full relative">
+        {/* Image Section (4/5 of the card height) */}
+        <img
+          src={service.image}
+          alt={service.title}
+          className="w-full h-4/5 object-cover transition-all duration-300 ease-in-out"
+        />
 
-          <div
-            className="flip-card-back w-[100%] h-[100%] bg-white border-[1px] text-black rounded-lg p-4 flex flex-col justify-center items-center" // Center back content too
-          >
-            <h1 className="text-2xl font-bold">{service.title}</h1>
-            <p>{service.longDesc}</p>
-          </div>
-        </motion.div>
+        {/* Title & Short Description (1/5 of the card height) */}
+        <div className="h-1/5 w-full flex flex-col justify-center items-center p-2 bg-white">
+          <h3 className="text-lg font-semibold">{service.title}</h3>
+          <p className="text-sm text-gray-600">{service.shortDesc}</p>
+        </div>
 
-        <motion.button
-          className="absolute bottom-4 right-4 bg-white rounded-full p-2 hover:scale-110 transition-transform duration-300 shadow-md hover:shadow-lg"
-          onClick={handleFlip}
+        {/* Long Description Overlay (Appears on Click) */}
+        <div
+          className={`absolute inset-0 bg-black/80 text-white flex items-center justify-center px-6 text-center transition-opacity duration-300
+          ${showDescription ? "opacity-100" : "opacity-0 pointer-events-none"}`}
         >
-          <FaSearch className="h-6 w-6 text-gray-800" /> {/* Use React Icon */}
-        </motion.button>
+          <p className="text-sm">{service.longDesc}</p>
+        </div>
       </div>
     </div>
   );

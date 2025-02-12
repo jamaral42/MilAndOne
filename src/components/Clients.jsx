@@ -18,11 +18,11 @@ export default function Clients() {
   useEffect(() => {
     if (!width) return;
 
-    const finalPosition = -width / 2 - 128 ; // Moves half the logos width
+    const finalPosition = -width / 2 - 110 ; // Moves half the logos width
 
     const controls = animate(xTranslation, [0, finalPosition], {
       ease: "linear",
-      duration: 10, // Faster loop
+      duration: 40, // Faster loop
       repeat: Infinity,
       repeatType: "loop",
     });
@@ -31,11 +31,11 @@ export default function Clients() {
   }, [xTranslation, width]);
 
   return (
-    <div className="pt-4 md:pb-40 overflow-hidden relative ">
-      <h2 className="flexCenter text-4xl font-bold mb-14 md:mb-16">Alguns dos Nossos Clientes</h2>
+    <div className="pt-4 md:pb-40 overflow-hidden relative text-center">
+      <h2 className="text-4xl font-bold mb-14 md:mb-16">Alguns dos Nossos Clientes</h2>
       <motion.div 
         ref={ref}
-        className="flex gap-64 w-max"
+        className="flex gap-55 w-max"
         style={{ x: xTranslation }}  
       >
         {[...companies, ...companies].map((company, index) => (
