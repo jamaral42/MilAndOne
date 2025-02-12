@@ -27,7 +27,7 @@ export default function Hero() {
   ];
 
   return (
-    <div>
+    <div className="">
       <Carousel items={carousel_items} />
       <div className=""></div>
     </div>

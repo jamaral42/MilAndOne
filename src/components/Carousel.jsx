@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 export default function Carousel({ items }) {
   
   const settings = {
+    arrows: false,
     dots: true,
     dotsClass: "slick-dots bottom-0",
     customPaging: () => (
