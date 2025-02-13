@@ -31,7 +31,7 @@ export default function Clients() {
   }, [xTranslation, width]);
 
   return (
-    <div className="pt-4 md:pb-40 overflow-hidden relative text-center">
+    <div className="py-20 overflow-hidden relative text-center">
       <h2 className="text-4xl font-bold mb-14 md:mb-16">Alguns dos Nossos Clientes</h2>
       <motion.div 
         ref={ref}

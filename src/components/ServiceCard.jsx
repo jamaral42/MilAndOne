@@ -5,7 +5,7 @@ export default function ServiceCard({ service }) {
 
   return (
     <div
-      className={`relative w-160 h-80 bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer transition-all duration-300 ease-in-out
+      className={`relative md:w-160 h-80 bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer transition-all duration-300 ease-in-out
       hover:scale-105 hover:shadow-2xl`}
       onClick={() => setShowDescription(!showDescription)}
     >

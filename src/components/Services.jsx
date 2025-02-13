@@ -4,29 +4,25 @@ const services = [
   {
     title: "Coffee Break",
     shortDesc: "Deitar cedo e cedo erguer, dá saúde e faz crescer.",
-    longDesc:
-      "Enjoy a selection of premium coffee blends, fresh pastries, and snacks tailored for corporate events and casual meetups.",
+    longDesc: "Um café bem feito e uma boa companhia é o início de um dia incrível.",
     image: "/coffee_break.jpg",
   },
   {
     title: "Cocktail",
     shortDesc: "Barriga vazia, não traz alegria.",
-    longDesc:
-      "Expertly crafted cocktails, mocktails, and curated drink selections to elevate your gatherings.",
+    longDesc: "Cocktails, mocktails e seleções de bebidas especialmente preparados para elevar o seu evento.",
     image: "/cocktail.png",
   },
   {
     title: "House Party",
     shortDesc: "Mi casa es tu casa.",
-    longDesc:
-      "From gourmet finger foods to full-course meals, we bring the party to your home with a customized menu.",
+    longDesc: "Desde comidas gourmet até refeições completas, trazemos a festa para a sua casa com um menu personalizado.",
     image: "/house_party.png",
   },
   {
     title: "Almoços/Jantares",
     shortDesc: "Mesa posta para quem gosta.",
-    longDesc:
-      "Deliciously prepared lunches and dinners for any occasion, ensuring high-quality taste and presentation.",
+    longDesc: "Almoços e jantares deliciosamente preparados para qualquer ocasião, garantindo alto padrão de sabor e apresentação.",
     image: "/almoços_jantares.jpg",
   },
 ];

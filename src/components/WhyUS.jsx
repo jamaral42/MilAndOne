@@ -1,7 +1,7 @@
 
 export default function WhyUS() {
   return (
-    <div className="py-16 md:pb-40 flex flex-col items-center">
+    <div className="py-20 flex flex-col items-center">
       <h1 className=" text-4xl font-bold">Porquê a Mil&1?</h1>
       <div className="max-padd-container flexCenter md:flexBetween gap-20 my-16 md:my-32">
         <div className="w-1/2">
