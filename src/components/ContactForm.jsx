@@ -68,7 +68,7 @@ export default function ContactForm({ isContactOpen, setIsContactOpen }) {
           </button>
 
           {/* Form */}
-          <h2 className="text-2xl font-bold text-center my-8">Contacte-nos</h2>
+          <h2 className="text-2xl font-bold text-center my-8">Envie-nos uma mensagem para realizar o seu desejo</h2>
           <form className="flex flex-col gap-8" onSubmit={handleSubmit}>
             {["email", "nome"].map((field, index) => (
               <div key={index} className="relative">

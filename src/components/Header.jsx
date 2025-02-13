@@ -38,7 +38,7 @@ export default function Header() {
             className="p-3 py-2 text-md bg-secondary shadow-xl text-primary rounded-full font-bold hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer"
             onClick={() => setIsContactOpen(true)}
           >
-            Contact Us
+            Contacto
           </button>
         </div>
       </div>
@@ -83,7 +83,7 @@ export default function Header() {
             className="p-4 py-2 text-xl bg-secondary shadow-xl text-primary rounded-full font-bold"
             onClick={() => setIsContactOpen(true)}
             >
-              Contact Us
+              Contacto
             </button>
           </motion.div>
         )}
